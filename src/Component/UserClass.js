@@ -13,16 +13,18 @@ async getUsers() {
 
 componentDidMount() {
     this.getUsers();
+
 }
 
 render() {
     return (
         <>
         {this.state.Users.map((Users)=>{
-            return <> <h1 key={Users.id}>{Users.name}</h1>
-            <h2 key={Users.id}>{Users.username}</h2>
-            <h3 key={Users.id}>{Users.email}</h3>
-            </>
+            return <div style={{backgroundColor: 'yellow'}}>
+             <h1 key={Users.id}>{Users.name}</h1>
+             <h2 key={Users.id}>{Users.username}</h2>
+             <h3 key={Users.id}>{Users.email}</h3>
+            </div>
         })}
         </>
     )
